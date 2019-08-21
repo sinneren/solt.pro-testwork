@@ -6,7 +6,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const CopyPlugin = require('copy-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
-const BUILD_NAME = 'docs';
+const BUILD_NAME = 'build';
 
 module.exports = {
     devServer: {
@@ -33,6 +33,17 @@ module.exports = {
                         },
                     },
                     'css-loader',
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            autoprefixer: {
+                                browsers: ["last 2 versions"]
+                            },
+                            plugins: [
+                                require('autoprefixer'),
+                            ]
+                        },
+                    },
                     'sass-loader',
                 ],
             }
