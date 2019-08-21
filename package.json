@@ -26,7 +26,7 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "watch": "webpack --mode development & webpack-dev-server",
-    "web": "node server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
