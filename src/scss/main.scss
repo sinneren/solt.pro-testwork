@@ -1,0 +1,16 @@
+@import "_variables";
+@import "_menu";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: $bg_color;
+    color: $text_color;
+}
+.wrapper {
+    max-width: 1066px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: $y_axis_padding;
+    padding-bottom: $y_axis_padding;
+}

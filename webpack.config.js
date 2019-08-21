@@ -13,7 +13,7 @@ module.exports = {
         port: 3000
     },
     entry: { 
-        index: './src/main.scss' 
+        index: './src/scss/main.scss' 
     },
     output: {
         path: path.resolve(__dirname, BUILD_NAME),
