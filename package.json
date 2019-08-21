@@ -2,7 +2,7 @@
   "name": "solt.pro",
   "version": "1.0.0",
   "description": "Test",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7"
