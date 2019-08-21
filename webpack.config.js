@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const CopyPlugin = require('copy-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 const BUILD_NAME = 'build';
@@ -47,6 +49,10 @@ module.exports = {
             hash: false,
             template: './src/index.html',
             filename: 'index.html'
-        })
+        }),
+        new CopyPlugin([
+            { from: './src/img', to: 'img' },
+        ]),
+        new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
     ]
 }

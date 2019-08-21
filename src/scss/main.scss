@@ -1,13 +1,14 @@
 @import "_variables";
+@import "_normalize";
 @import "_menu";
 
 html, body {
-    margin: 0;
-    padding: 0;
     background-color: $bg_color;
     color: $text_color;
+    font-family: $base_font;
 }
 .wrapper {
+    width: 100%;
     max-width: 1066px;
     height: 100%;
     margin: 0 auto;

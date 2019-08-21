@@ -5,3 +5,11 @@ $white_color: #FFF;
 $y_axis_padding: 95px;
 $base_font: 'Roboto', Arial, Tahoma, sans-serif;
 $text_color: #2B2B2B;
+$mobile_bp: 475px;
+$tablet_bp: 1066px;
+
+@mixin media-breakpoint-down($max) {
+    @media (max-width: $max) {
+        @content;
+    }
+}

@@ -2,22 +2,30 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-around;
     padding: 0;
     margin-top: -31px;
-    margin-left: -11px;
-    margin-right: -11px;
+    @include media-breakpoint-down($mobile_bp) {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
     &__item {
         position: relative;
-        flex-basis: 31.233%;
+        flex-basis: 30.733%;
         margin-top: 31px;
-        margin-left: 11px;
-        margin-right: 11px;
         height: 300px;
         background-color: $white_color;
         box-shadow: 0px 22px 44px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
         list-style: none;
+        overflow: hidden;
         z-index: 1;
+        @include media-breakpoint-down($tablet_bp) {
+            flex-basis: 46.9%;
+        }
+        @include media-breakpoint-down($mobile_bp) {
+            flex-basis: 100%
+        }
         &::after {
             position: absolute;
             bottom: 0;
@@ -30,18 +38,25 @@
         }
     }
     &__link {
-        cursor: pointer;
+        display: block;
+        height: 100%;
         text-decoration: none;
+        cursor: pointer;
     }
     &__title {
         position: absolute;
         bottom: 27px;
         left: 40px;
-        font-family: $base_font;
         font-weight: bold;
         font-size: 38px;
         line-height: 113%;
         color: $text_color;
         z-index: 3;
+    }
+    &__picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
