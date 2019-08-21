@@ -6,7 +6,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const CopyPlugin = require('copy-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
-const BUILD_NAME = 'build';
+const BUILD_NAME = 'docs';
 
 module.exports = {
     devServer: {
